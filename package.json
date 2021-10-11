@@ -18,7 +18,12 @@
     "@angular/platform-browser": "~12.2.0",
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
+    "@mapbox/mapbox-gl-geocoder": "^4.7.3",
+    "@types/socket.io-client": "^3.0.0",
+    "mapbox-gl": "^2.2.0",
+    "ngx-socket-io": "^4.1.0",
     "rxjs": "~6.6.0",
+    "socket.io-client": "^4.2.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },
@@ -27,6 +32,7 @@
     "@angular/cli": "~12.2.5",
     "@angular/compiler-cli": "~12.2.0",
     "@types/jasmine": "~3.8.0",
+    "@types/mapbox-gl": "^2.4.1",
     "@types/node": "^12.11.1",
     "jasmine-core": "~3.8.0",
     "karma": "~6.3.0",
@@ -35,5 +41,10 @@
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
     "typescript": "~4.3.5"
-  }
+  },
+  "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.5.",
+  "main": "karma.conf.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
