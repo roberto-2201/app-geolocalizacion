@@ -41,12 +41,38 @@ export class AppComponent implements OnInit {
       }
     });
 
-    this.socket.fromEvent('position')
+
+    //Recibe coord bus1
+    this.socket.fromEvent('UNI1')
       .subscribe((coords: string) => {
+        console.log(coords);
+        
         const newCord=coords.split(',');
        const cors =[parseFloat(newCord[1]),parseFloat(newCord[0])];
-       console.log('Server:', cors);
-        this.mapCustomService.addMarkerCustom(cors);
+       console.log('UNI1:', cors);
+        this.mapCustomService.addMarkerCustom(cors,'marker');
+      });
+
+      //Recibe coord bus3
+      this.socket.fromEvent('UNI2')
+      .subscribe((coords: string) => {
+        console.log(coords);
+        
+        const newCord=coords.split(',');
+       const cors =[parseFloat(newCord[1]),parseFloat(newCord[0])];
+       console.log('UNI2:', cors);
+        this.mapCustomService.addMarkerCustom(cors,'bus2');
+      });
+
+      //Recibe coord bus3
+      this.socket.fromEvent('UNI3')
+      .subscribe((coords: string) => {
+        console.log(coords);
+        
+        const newCord=coords.split(',');
+       const cors =[parseFloat(newCord[1]),parseFloat(newCord[0])];
+       console.log('UNI3:', cors);
+        this.mapCustomService.addMarkerCustom(cors,'bus');
       });
 
       this.socket.fromEvent('message')
@@ -82,7 +108,7 @@ export class AppComponent implements OnInit {
   }
 
   testMarker(): void {
-    this.mapCustomService.addMarkerCustom([-8.628139488926513, 41.159082702543635]);
+    this.mapCustomService.addMarkerCustom([-8.628139488926513, 41.159082702543635],'marker');
   }
 
 
